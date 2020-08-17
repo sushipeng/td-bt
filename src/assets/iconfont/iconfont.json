@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "741980",
+      "name": "择律-选择费用-倒三角形-反对",
+      "font_class": "zelvxuanzefeiyongdaosanjiaoxingfandui",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "741981",
+      "name": "择律-选择费用-正三角形-支持",
+      "font_class": "zelvxuanzefeiyongzhengsanjiaoxingzhichi",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    }
+  ]
+}
