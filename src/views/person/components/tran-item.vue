@@ -1,7 +1,7 @@
 <template>
     <div class="containner">
         <div  class="form-content">
-            <h3 class="title">等待确认交易</h3>
+            <h3 class="title">合约仲裁</h3>
             <div class="row">
                  <div class="tip">选择合约号，可以提取交易信息。</div>
                   <van-field 
@@ -13,7 +13,7 @@
                     right-icon="arrow-down"
                     @click="handleClickField"/>
 
-                  <van-button block size="small" type="primary" @click="handleExtract">提取</van-button>
+                  <van-button block size="small" type="primary" @click="handleExtract">提取仲裁信息</van-button>
             </div>
 
             <div class="row">
@@ -27,8 +27,12 @@
                     placeholder="这里会显示交易信息及电子机票截图。确认出票无误后按上链，把信息上链。"
                     readonly
                 />
+                 <div class="btn-wrap">
+                    <van-button round size="small" type="danger" >驳回</van-button>
+                    <van-button round size="small" type="primary" @click="handleCochain">同意</van-button>
+                </div>
 
-                  <van-button block size="small" type="primary" @click="handleCochain">上链</van-button>
+                  <!-- <van-button block size="small" type="primary" @click="handleCochain">绿色</van-button> -->
             </div>
             
         </div>
@@ -157,5 +161,5 @@
             }
         }
     }
-
+    
 </style>

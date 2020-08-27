@@ -13,7 +13,7 @@
                 <van-field
                     class="textarea"
                     v-model="accountMsg"
-                    rows="1"
+                    rows="3"
                     autosize
                     label=""
                     type="textarea"
@@ -109,7 +109,17 @@
                 setTimeout(_ => {
                     this.showOverlay = false
                      this.$toast('获取成功！');
-                     this.accountMsg = '成功'
+                     this.accountMsg = `transaction hash  call0x13a08ddcd940b8602f147ff228f4c08720456aa30xf3e6d766b3dbb2da5dcc3ccd3acb1ce3868fbc350xa035b1fe
+ from  0x13a08ddcd940b8602f147ff228f4c08720456aa3
+ to  account.price() 0xf3e6d766b3dbb2da5dcc3ccd3acb1ce3868fbc35
+ hash  call0x13a08ddcd940b8602f147ff228f4c08720456aa30xf3e6d766b3dbb2da5dcc3ccd3acb1ce3868fbc350xa035b1fe
+ input  0xa03...5b1fe
+ decoded input  {}
+ decoded output  {
+ "0": "uint256: 1000000000000000000"
+}
+ logs  []
+                     `
                 }, 500)
             },
             handleExtract() {
@@ -121,7 +131,22 @@
                 setTimeout(_ => {
                     this.showOverlay = false
                      this.$toast('提取成功！');
-                     this.tradeMsg = '交易信息成功'
+                     this.tradeMsg = `transaction hash  call0x13a08ddcd940b8602f147ff228f4c08720456aa30xc7a36398395e393236fd506afb9df9f16f235cef0x474da79a0000000000000000000000000000000000000000000000000000000000002711
+ from  0x13a08ddcd940b8602f147ff228f4c08720456aa3
+ to  Escrow.contracts(uint256) 0xc7a36398395e393236fd506afb9df9f16f235cef
+ hash  call0x13a08ddcd940b8602f147ff228f4c08720456aa30xc7a36398395e393236fd506afb9df9f16f235cef0x474da79a0000000000000000000000000000000000000000000000000000000000002711
+ input  0x474...02711
+ decoded input  {
+ "uint256 ": "10001"
+}
+ decoded output  {
+ "0": "uint256: value 1000000000000000000",
+ "1": "address: seller 0xd7d90BBB0Fe833d482315c97bE4E527B550Fb37B",
+ "2": "address: buyer 0x13A08dDcD940b8602f147FF228f4c08720456aA3",
+ "3": "uint8: state 2"
+}
+ logs  []
+                     `
                 }, 500)
             }
         }
@@ -162,6 +187,11 @@
                 margin-bottom: 15px;
                 border: 1px solid #ccc;
                 border-radius: 3px;
+            }
+            .textarea {
+                padding: 5px 8px;
+                height: 120px;
+                overflow-y: auto;
             }
         }
     }
