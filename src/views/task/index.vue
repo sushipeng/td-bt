@@ -58,7 +58,7 @@
 
 <script>
     import overlay from '@/components/overlay'
-    import json from './json'
+    import json from '@/utils/json'
 
     export default {
         name: 'task',
@@ -78,7 +78,7 @@
                 setTimeout(_ => {
                     this.showOverlay = false
                     this.$router.push({ path: '/contract' })
-                }, 500)
+                }, 300)
             },
             onFailed(errorInfo) {
                 this.$toast({

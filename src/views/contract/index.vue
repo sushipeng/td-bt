@@ -37,7 +37,7 @@
 
                <div class="content" v-for="(el, index) of items.flightInfo" :key="index">
                     <div class="row"> 航空公司：{{items.name}}</div>
-                    <div class="row level">用户评级：<span @click="showDialog(el)">{{items.level}}</span></div>
+                    <div class="row level">用户评级：<span @click="showDialog(el)">{{el.level}}</span></div>
                     <div class="row">用户ID：{{el.userId}}</div>
                     <div class="row">用户销售单数：{{items.ticket}}</div>
                     <div class="row">最高客单价：{{items.price}}</div>
@@ -78,7 +78,7 @@
 
 <script>
     import overlay from '@/components/overlay'
-    import json from './json'
+    import json from '@/utils/json'
 
     export default {
         name: 'contract',
@@ -111,7 +111,7 @@
                 setTimeout(_ => {
                     this.showOverlay = false
                     this.$router.push({ path: '/person' })
-                }, 500)
+                }, 300)
             },
             onFailed(errorInfo) {
                 this.$toast({
@@ -240,7 +240,9 @@
                     margin-right: 5px;
                 }
                 .remark {
-                  width: 255px;
+                  width: 80%;
+                  font-size: 14px;
+                  line-height: 24px;
                 }
             }
             

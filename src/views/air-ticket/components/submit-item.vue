@@ -11,7 +11,7 @@
                     :show-confirm="false"
                     :show-mark="false"
                     color="#1989fa"
-                    row-height="30"
+                    row-height="24"
                     />
             </div>
             <div class="item">
@@ -72,7 +72,7 @@
                 setTimeout(_ => {
                     this.showOverlay = false
                     this.$emit('handleSuccess', 'payItem')
-                }, 500)
+                }, 300)
             },
             onFailed(errorInfo) {
                 this.$toast({
@@ -96,6 +96,9 @@
     }
     .form-content {
         ::v-deep {
+            .van-calendar__day {
+                font-size: 14px;
+            }
             .van-calendar__selected-day {
                 width: 22px;
                 height: 22px;

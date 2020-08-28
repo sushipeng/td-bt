@@ -1,10 +1,13 @@
 <template>
     <div class="containner">
-         <div class="dialogue-content">
+        <div class="dialogue-content">
             <p>Mr. MO, welcome!</p>
             <p>Client ID:  x12321</p>
-             
         </div>
+        <div class="tip-wrap">
+            <p>由于用户钱包是去中心化的，这里的明细只是显示用户交的押金的数额。</p>
+        </div>
+          
 
         <div  class="form-content">
             <h3 class="title">我的账户</h3>
@@ -18,21 +21,19 @@
                     label=""
                     type="textarea"
                     placeholder="这里会显示账户有多少CDEP"
-                    readonly
                 />
             </div>
 
             <div class="row">
                  <div class="tip">选择合约号，可以从区块链上提取交易信息。</div>
                   <van-field 
+                    readonly
                     class="field"
                     v-model="userId" 
                     placeholder="请选择"
-                    readonly
                     label="合约号"
                     right-icon="arrow-down"
                     @click="handleClickField"/>
-
                   <van-button block size="small" type="primary" @click="handleExtract">提取</van-button>
             </div>
 
@@ -45,7 +46,7 @@
                     label=""
                     type="textarea"
                     placeholder="这里会显示交易信息"
-                    readonly
+                    
                 />
                   <!-- <van-button block size="small" type="primary" @click="handleCochain">上链</van-button> -->
             </div>
@@ -89,7 +90,7 @@
                 setTimeout(_ => {
                     this.showOverlay = false
                     this.$emit('handleSuccess', 'contractItem')
-                }, 500)
+                }, 300)
             },
             onFailed(errorInfo) {
                 this.$toast({
@@ -120,7 +121,7 @@
 }
  logs  []
                      `
-                }, 500)
+                }, 300)
             },
             handleExtract() {
                 if(!this.userId) {
@@ -147,7 +148,7 @@
 }
  logs  []
                      `
-                }, 500)
+                }, 300)
             }
         }
     }
@@ -156,27 +157,33 @@
 
     .containner {
     }
+    .tip-wrap {
+        font-size: 14px;
+        padding-left: 18px;
+        width: 90%;
+    }
     .form-content {
-        margin-top: 15%;
-        padding-bottom: 15px;
+        margin-top: 4%;
+        padding-bottom: 5px;
         .title {
             font-size: 18px;
-            height: 38px;
-            line-height: 38px;
+            padding: 5px 0;
+            // height: 38px;
+            // line-height: 38px;
             font-weight: 600;
             text-align: center;
-            margin-bottom: 5px;
+            // margin-bottom: 5px;
         }
         .row {
             padding: 0 15px;
-            margin-bottom: 15px;
+            margin-bottom: 8px;
             .link {
                 display: inline-block;
                 font-size: 14px;
                 cursor: pointer;
                 color: #1989fa;
                 border-bottom: 1px solid #1989fa;
-                margin-bottom: 15px;
+                margin-bottom: 8px;
             }
             .tip {
                 font-size: 14px;
@@ -184,13 +191,13 @@
                 color: #999;
             }
             .field, .textarea {
-                margin-bottom: 15px;
+                margin-bottom: 8px;
                 border: 1px solid #ccc;
                 border-radius: 3px;
             }
             .textarea {
                 padding: 5px 8px;
-                height: 120px;
+                height: 110px;
                 overflow-y: auto;
             }
         }

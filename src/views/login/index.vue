@@ -55,7 +55,7 @@
                         Storage.setItem('token', 'td-bt', { expires: 1/(24*60)*30 })
                         this.$router.push({ path: '/' })
                     }
-                }, 500)
+                }, 300)
             },
 
             onFailed(errorInfo) {

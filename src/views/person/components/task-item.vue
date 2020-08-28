@@ -77,7 +77,7 @@
                 setTimeout(_ => {
                     this.showOverlay = false
                     this.$emit('handleSuccess', 'contractItem')
-                }, 500)
+                }, 300)
             },
             onFailed(errorInfo) {
                 this.$toast({
@@ -100,7 +100,7 @@
 <style lang='scss' scoped>
 
     .containner {
-        margin-top: 18%;
+        margin-top: 5%;
     }
     .form-content {
         padding-bottom: 15px;

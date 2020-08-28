@@ -31,7 +31,7 @@
                 setTimeout(_ => {
                     this.showOverlay = false
                     this.$router.push({ path: '/task' })
-                }, 500)
+                }, 300)
             },
             onFailed(errorInfo) {
                 this.$toast({

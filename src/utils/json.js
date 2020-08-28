@@ -8,7 +8,7 @@ let json = [
         price: 560,
         distance: 30000,
         state: '可接受',
-        remark: '1955年中尼建立外交关系以来，两国各领域合作不断发展。',
+        remark: '空间宽敞，服务周到，旅程开心，凌晨，随着滑轮接触地面，飞机一阵抖动，我终于说出了最后一句再见',
         address: [
             { departure: '广州', destination: '青岛', depTime: '12:00', desTime: '14:00'},
             { departure: '青岛', destination: '广州', depTime: '18:00', desTime: '20:00'}
@@ -16,19 +16,19 @@ let json = [
         flightInfo: [
             {
                 level: '4.9',
-                userId: 'x12322'
+                userId: 'x12321'
             },
             {
                 level: '4.7',
-                userId: 'x12373'
+                userId: 'x12371'
             },
             {
                 level: '4.6',
-                userId: 'x12384'
+                userId: 'x12381'
             },
             {
                 level: '4.8',
-                userId: 'x12395'
+                userId: 'x12391'
             }
         ]
     },
@@ -41,7 +41,7 @@ let json = [
         price: 600,
         distance: 20000,
         state: '可接受',
-        remark: '高僧玄奘到访释迦牟尼诞生地兰毗尼并留下珍贵文字记录。',
+        remark: '去了不同的地方，看了不同的风景，知道了不同的事，感悟了不同的人生。 ',
         address: [
             { departure: '广州', destination: '青岛', depTime: '12:00', desTime: '14:00'},
             { departure: '青岛', destination: '广州', depTime: '18:00', desTime: '20:00'}
@@ -74,7 +74,7 @@ let json = [
         price: 580,
         distance: 30000,
         state: '可接受',
-        remark: '互尊互信的好朋友、互惠互利的好伙伴、互学互鉴的好邻居、互帮互助的好兄弟。',
+        remark: '一个人的旅行，在路上遇见最真实的自己。',
         address: [
             { departure: '广州', destination: '青岛', depTime: '12:00', desTime: '14:00'},
             { departure: '青岛', destination: '广州', depTime: '18:00', desTime: '20:00'}
@@ -105,9 +105,9 @@ let json = [
         level: '4.7',
         ticket: 10,
         price: 620,
-        distance: 30000,
+        distance: 20000,
         state: '可接受',
-        remark: '患难见真情。在中国疫情防控最困难的时刻，尼方通过各种方式表达支持；中方同样在尼方抗疫困难之时。',
+        remark: '一辈子是场修行，短的是旅行，长的是人生。身未动，心已远。',
         address: [
             { departure: '广州', destination: '青岛', depTime: '12:00', desTime: '14:00'},
             { departure: '青岛', destination: '广州', depTime: '18:00', desTime: '20:00'}

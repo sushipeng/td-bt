@@ -28,11 +28,11 @@
                     readonly
                 />
                  <div class="btn-wrap">
-                    <van-button round size="small" type="danger" >驳回</van-button>
+                    <van-button round size="small" type="danger" @click="handleReject">驳回</van-button>
                     <van-button round size="small" type="primary" @click="handleCochain">同意</van-button>
                 </div>
 
-                  <!-- <van-button block size="small" type="primary" @click="handleCochain">绿色</van-button> -->
+                  <!-- <van-button block size="small" type="primary" @click="handleCochain">上链</van-button> -->
             </div>
             
         </div>
@@ -72,7 +72,7 @@
                 setTimeout(_ => {
                     this.showOverlay = false
                     this.$emit('handleSuccess', 'contractItem')
-                }, 500)
+                }, 300)
             },
             onFailed(errorInfo) {
                 this.$toast({
@@ -97,7 +97,7 @@
                     this.showOverlay = false
                      this.$toast('提取成功！');
                      this.message = '交易信息成功'
-                }, 500)
+                }, 300)
             },
             handleCochain() {
                 if(!this.userId) {
@@ -113,7 +113,10 @@
                     this.showOverlay = false
                     this.$toast('上链成功！')
                     this.$router.push({ path: '/account' })
-                }, 500)
+                }, 300)
+            },
+            handleReject() {
+                this.$toast('已驳回')
             }
         }
     }

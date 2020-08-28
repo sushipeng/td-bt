@@ -32,7 +32,6 @@
                     right-icon="arrow-down"
                     @click="handleShowCalendar"
                     :rules="[{ required: true, message: '' }]"/>
-
                 <div class="checked-content">
                     <van-checkbox v-model="checked" icon-size="14px">商务/头等舱</van-checkbox>
                 </div>
@@ -66,6 +65,7 @@
             title="日历"
             :show-title="false"
             :show-mark="false"
+            :show-confirm="false"
             color="#1989fa"
             row-height="32"
             @confirm="onConfirmCalendar" />
@@ -101,7 +101,7 @@
                 setTimeout(_ => {
                     this.showOverlay = false
                     this.$emit('handleSuccess', 'selectItem')
-                }, 500)
+                }, 300)
             },
             onFailed(errorInfo) {
                 this.$toast({
